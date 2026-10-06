@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed &amp; Lamia — Wedding Invitation</title>
+  <meta name="description" content="Ahmed &amp; Lamia invite you to celebrate their wedding — Wednesday 11 • 11 • 2026, Talinda Hall, Amira Valley." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahmed &amp; Lamia — Wedding Invitation" />
+  <meta property="og:description" content="Wednesday 11 • 11 • 2026 · 7:00 PM · Talinda Hall, Amira Valley" />
+  <meta property="og:url" content="https://mohamed-lab-source.github.io/ahmed-lamia-wedding/" />
+  <meta property="og:image" content="https://mohamed-lab-source.github.io/ahmed-lamia-wedding/assets/invitation-card.jpg" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1536" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23b8955a'/><text x='50' y='64' font-size='40' text-anchor='middle' fill='white' font-family='serif'>A&amp;L</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cinzel:wght@400;500&family=Amiri&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locked">
+
+  <!-- ───── Envelope intro ───── -->
+  <div id="envelope-screen">
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-card"><img src="assets/invitation-card.jpg" alt="" /></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="open-btn" aria-label="Open invitation">
+        <span data-bind="initials"></span>
+      </button>
+    </div>
+    <p class="tap-hint">Tap the seal to open</p>
+  </div>
+
+  <main id="invite">
+
+    <!-- ───── Hero (the invitation card, in HTML) ───── -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="arch reveal">
+        <svg class="rings" viewBox="0 0 120 60" aria-hidden="true">
+          <ellipse cx="48" cy="34" rx="26" ry="16" />
+          <ellipse cx="72" cy="30" rx="26" ry="16" />
+          <g class="gem"><path d="M60 6 l5 6 -5 6 -5 -6z" /></g>
+        </svg>
+
+        <p class="tagline" data-bind="tagline"></p>
+
+        <h1 class="names">
+          <span class="name">
+            <svg class="icon crown" viewBox="0 0 64 40" aria-hidden="true"><path d="M6 32 L4 10 L18 22 L32 4 L46 22 L60 10 L58 32 Z M6 36 H58" /><circle cx="4" cy="9" r="2.5"/><circle cx="32" cy="3" r="2.5"/><circle cx="60" cy="9" r="2.5"/></svg>
+            <span data-bind="partner1"></span>
+          </span>
+          <span class="amp">&amp;</span>
+          <span class="name">
+            <svg class="icon rose" viewBox="0 0 64 40" aria-hidden="true"><circle cx="32" cy="20" r="11" /><path d="M32 12 c6 2 7 9 1 11 c-5 1-7-4-3-6 M24 22 c3 5 12 6 16 0" /><path class="leaf" d="M20 22 c-10 -2 -14 6 -14 6 c8 3 13 0 14 -6z M44 22 c10 -2 14 6 14 6 c-8 3 -13 0 -14 -6z"/></svg>
+            <span data-bind="partner2"></span>
+          </span>
+        </h1>
+
+        <p class="tagline" data-bind="invitationLine"></p>
+
+        <div class="facts">
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <strong data-bind="dateText"></strong>
+            <small data-bind="dayText"></small>
+          </div>
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <strong data-bind="timeText"></strong>
+          </div>
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <strong data-bind="venue.name"></strong>
+            <small data-bind="venue.place"></small>
+          </div>
+        </div>
+
+        <p class="closing"><span class="heart-rule">♡</span><span data-bind="closingLine"></span></p>
+      </div>
+      <a href="#countdown" class="scroll-cue" aria-label="Scroll down">⌄</a>
+    </section>
+
+    <!-- ───── Countdown ───── -->
+    <section id="countdown" class="section countdown">
+      <h2 class="script reveal">Counting down to forever</h2>
+      <div class="timer reveal">
+        <div><span id="cd-days">0</span><small>Days</small></div>
+        <div><span id="cd-hours">0</span><small>Hours</small></div>
+        <div><span id="cd-mins">0</span><small>Minutes</small></div>
+        <div><span id="cd-secs">0</span><small>Seconds</small></div>
+      </div>
+      <a class="btn btn-ghost reveal" id="add-calendar" target="_blank" rel="noopener">Add to calendar</a>
+    </section>
+
+    <!-- ───── Venue ───── -->
+    <section class="section venue">
+      <p class="eyebrow reveal">The venue</p>
+      <h2 class="script reveal" data-bind="venue.name"></h2>
+      <p class="venue-place reveal" data-bind="venue.place"></p>
+
+      <div class="gallery reveal" id="gallery"></div>
+
+      <div class="address reveal">
+        <p data-bind="venue.address"></p>
+        <p class="ar" lang="ar" dir="rtl" data-bind="venue.addressAr"></p>
+      </div>
+      <a class="btn reveal" id="map-link" target="_blank" rel="noopener">Get directions</a>
+    </section>
+
+    <!-- ───── RSVP (hidden until a contact is set in config.js) ───── -->
+    <section class="section rsvp" id="rsvp" hidden>
+      <h2 class="script reveal">Will you join us?</h2>
+      <p class="eyebrow reveal" data-bind="rsvp.deadlineText"></p>
+      <form id="rsvp-form" class="reveal" novalidate>
+        <label>Full name
+          <input name="name" required autocomplete="name" />
+        </label>
+        <fieldset class="choice">
+          <legend>Attendance</legend>
+          <label><input type="radio" name="attending" value="Joyfully accepts" required /> <span>Joyfully accepts</span></label>
+          <label><input type="radio" name="attending" value="Regretfully declines" /> <span>Regretfully declines</span></label>
+        </fieldset>
+        <label>Number of guests
+          <select name="guests">
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+          </select>
+        </label>
+        <label>A note for the couple <em>(optional)</em>
+          <textarea name="message" rows="3"></textarea>
+        </label>
+        <button class="btn" type="submit">Send RSVP</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <footer class="section footer">
+      <div class="divider" aria-hidden="true"><span>♡</span></div>
+      <p class="signature script"><span data-bind="first1"></span> &amp; <span data-bind="first2"></span></p>
+      <p class="eyebrow" data-bind="dateText"></p>
+    </footer>
+  </main>
+
+  <!-- Lightbox for venue photos -->
+  <dialog id="lightbox"><img alt="" /><button aria-label="Close">×</button></dialog>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
